@@ -30,8 +30,7 @@ project "msdf-atlas-gen"
 
     links
     {
-        "freetypeg",
-        "msdfgen.a"
+        "msdfgen"
     }
 
     filter "configurations:Debug"
