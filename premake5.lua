@@ -14,6 +14,11 @@ project "msdf-atlas-gen"
     objdir "build/obj/%{cfg.buildcfg}"
     targetdir "build/bin/%{cfg.buildcfg}"
 
+    defines
+    {
+        "_CRT_SECURE_NO_WARNINGS"
+    }
+
     files
     {
         "msdf-atlas-gen/*.h",
@@ -36,11 +41,11 @@ project "msdf-atlas-gen"
     filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
-
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "speed"
 
-    filter "configurations:Dist"
+    filter "configurations:Distribution"
+		defines "DISTRIBUTION"
 		runtime "Release"
-		optimize "speed"
+		optimize "on"
