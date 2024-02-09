@@ -7,7 +7,7 @@ project "msdf-atlas-gen"
 	architecture "x86_64"
     configurations { "Debug", "Release", "Dist" }
     platforms { "Windows", "Linux" }
-    staticruntime "off"
+	staticruntime "on"
 
     dependson "msdfgen"
 
@@ -16,7 +16,7 @@ project "msdf-atlas-gen"
 
     defines
     {
-        "_CRT_SECURE_NO_WARNINGS"
+        "D_CRT_SECURE_NO_WARNINGS",
     }
 
     files
