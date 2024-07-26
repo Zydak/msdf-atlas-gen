@@ -37,6 +37,7 @@ project "msdf-atlas-gen"
     {
         "msdfgen"
     }
+    buildoptions { "/MP" }
 
     filter "configurations:Debug"
 		runtime "Debug"
